@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import GameList from "./components/GameList";
 import GameForm from "./components/GameForm";
 import Home from "./components/Home";
-import News from "./components/News";
+import News from "./components/GameNews";
 
 function App() {
   const [games, setGames] = useState([]);

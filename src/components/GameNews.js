@@ -18,6 +18,21 @@ const News = () => {
         console.error("GameNews GET Error:", error);
       });
   };
+
+  return (
+    <div>
+      <h2>Game News</h2>
+      {news.map((currentNews) => (
+        <div key={currentNews.id}>
+          <a href={currentNews.article_url} target="_blank">
+            <img src={currentNews.main_image} alt="game thumbnail" />
+          </a>
+          <h3>{currentNews.title}</h3>
+          <p>{currentNews.short_description}</p>
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default News;
