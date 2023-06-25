@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import GameItem from "./GameItem";
 import Pagination from "./Pagination";
 
-const GameList = () => {
+const GameFinder = () => {
   const [games, setGames] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
@@ -16,11 +16,11 @@ const GameList = () => {
     fetch("http://localhost:3001/games")
       .then((response) => response.json())
       .then((data) => {
-        console.log("GameList GET Success");
+        console.log("GameFinder GET Success");
         setGames(data);
       })
       .catch((error) => {
-        console.error("GameList GET Error:", error);
+        console.error("GameFinder GET Error:", error);
       });
   };
 
@@ -47,7 +47,7 @@ const GameList = () => {
 
   return (
     <div>
-      <h2>Game List</h2>
+      <h2>Game Finder</h2>
       <div>
         <input
           type="text"
@@ -69,4 +69,4 @@ const GameList = () => {
   );
 };
 
-export default GameList;
+export default GameFinder;

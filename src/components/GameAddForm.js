@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const GameForm = ({ addGame }) => {
+const GameAddForm = ({ addGame }) => {
   const [title, setTitle] = useState("");
   const [genre, setGenre] = useState("");
 
@@ -21,7 +21,7 @@ const GameForm = ({ addGame }) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("GameForm POST Success", data);
+        console.log("GameAddForm POST Success", data);
         setTitle("");
         setGenre("");
         addGame(data);
@@ -69,4 +69,4 @@ const GameForm = ({ addGame }) => {
   );
 };
 
-export default GameForm;
+export default GameAddForm;
