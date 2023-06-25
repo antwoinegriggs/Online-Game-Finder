@@ -36,7 +36,7 @@ const News = () => {
   const totalPages = Math.ceil(news.length / newsPerPage);
 
   return (
-    <div>
+    <div class="news-container">
       <h2>Game News</h2>
       {currentNews.map((currentNews) => (
         <div key={currentNews.id}>

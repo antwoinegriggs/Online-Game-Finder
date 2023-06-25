@@ -20,10 +20,10 @@ const FetchLatestNews = () => {
   };
 
   return (
-    <div>
+    <div class="game-news-container">
       <h2>Game News</h2>
       {latestNews.map((news) => (
-        <div key={news.id}>
+        <div class="game-news-card" key={news.id}>
           <a href={news.article_url} target="_blank" rel="noopener noreferrer">
             <img src={news.main_image} alt="game thumbnail" />
           </a>

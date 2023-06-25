@@ -46,9 +46,9 @@ const GameFinder = () => {
   const totalPages = Math.ceil(filteredGames.length / gamesPerPage);
 
   return (
-    <div>
+    <div class="game-finder-container">
       <h2>Game Finder</h2>
-      <div>
+      <div class="search-bar">
         <input
           type="text"
           placeholder="Search by title"
@@ -56,15 +56,19 @@ const GameFinder = () => {
           onChange={handleSearch}
         />
       </div>
-      {currentGames.map((game) => (
-        <GameItem key={game.id} game={game} />
-      ))}
-      <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        handlePrevPage={handlePrevPage}
-        handleNextPage={handleNextPage}
-      />
+      <div class="game-item-container">
+        {currentGames.map((game) => (
+          <GameItem key={game.id} game={game} />
+        ))}
+      </div>
+      <div class="pagination-container">
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          handlePrevPage={handlePrevPage}
+          handleNextPage={handleNextPage}
+        />
+      </div>
     </div>
   );
 };

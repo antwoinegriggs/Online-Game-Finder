@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from "react";
 import FetchLatestNews from "./FetchLastetNews";
 import FetchLatestGames from "./FetchLatestGames";
 
 const Home = () => {
   return (
-    <>
+    <div class="home-container">
       <FetchLatestNews />
       )(
       <FetchLatestGames />
-    </>
+    </div>
   );
 };
 

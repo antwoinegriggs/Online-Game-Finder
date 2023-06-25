@@ -20,11 +20,11 @@ const FetchLatestGames = () => {
   };
 
   return (
-    <div>
+    <div class="game-list">
       <h2>Game List</h2>
       {latestGames.map((games) => (
-        <div key={games.id}>
-          <div>
+        <div class="game-list-container" key={games.id}>
+          <div class="game-list-card">
             <a href={games.game_url} target="_blank">
               <img src={games.thumbnail} alt="game thumbnail" />
             </a>
