@@ -9,14 +9,8 @@ function App() {
     <div className="App">
       <Router>
         <nav>
-          <ul>
-            <li>
-              <Link to="/">Game List</Link>
-            </li>
-            <li>
-              <Link to="/add-game">Add Game</Link>
-            </li>
-          </ul>
+          <Link to="/">Game List</Link>
+          <Link to="/add-game">Add Game</Link>
         </nav>
         <Routes>
           <Route path="/" element={<GameList />} />
