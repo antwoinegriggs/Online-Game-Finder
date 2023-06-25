@@ -24,7 +24,9 @@ const GameList = () => {
       <h2>Game List</h2>
       {games.map((game) => (
         <div key={game.id}>
-          <img src={game.thumbnail} alt="game thumbnail" />
+          <a href={game.game_url}>
+            <img src={game.thumbnail} alt="game thumbnail" />
+          </a>
           <h3>{game.title}</h3>
           <p>{game.genre}</p>
         </div>

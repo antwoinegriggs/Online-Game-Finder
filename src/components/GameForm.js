@@ -1,4 +1,3 @@
-// GameForm.js
 import React, { useState } from "react";
 
 const GameForm = ({ addGame }) => {
@@ -25,7 +24,7 @@ const GameForm = ({ addGame }) => {
         console.log("GameForm POST Success", data);
         setTitle("");
         setGenre("");
-        addGame(data); // Update the state in the parent component
+        addGame(data);
       })
       .catch((error) => {
         console.error("handleSubmit Error:", error);
@@ -46,7 +45,23 @@ const GameForm = ({ addGame }) => {
         </div>
         <div>
           <label>Genre:</label>
-          <textarea value={genre} onChange={(e) => setGenre(e.target.value)} />
+          <select value={genre} onChange={(e) => setGenre(e.target.value)}>
+            <option value="">Select Genre</option>
+            <option value="MMORPG">MMORPG</option>
+            <option value="Social">Social</option>
+            <option value="Sports">Sports</option>
+            <option value="Strategy">Strategy</option>
+            <option value="Card Game">Card Game</option>
+            <option value="Web Browser">Web Browser</option>
+            <option value="MMO">MMO</option>
+            <option value="Shooter">Shooter</option>
+            <option value="Fighting">Fighting</option>
+            <option value="MOBA">MOBA</option>
+            <option value="Racing">Racing</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Battle Royale">Battle Royale</option>
+            <option value="MMOARPG">MMOARPG</option>
+          </select>
         </div>
         <button type="submit">Add</button>
       </form>
