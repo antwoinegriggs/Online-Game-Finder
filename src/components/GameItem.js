@@ -3,7 +3,9 @@ import React from "react";
 const GameItem = ({ game }) => {
   return (
     <div>
-      <img src={game.thumbnail} alt="game thumbnail" />
+      <a href={game.game_url} target="_blank">
+        <img src={game.thumbnail} alt="game thumbnail" />
+      </a>
       <h3>{game.title}</h3>
       <p>{game.genre}</p>
     </div>

@@ -23,7 +23,7 @@ function App() {
           <Link to="/game-finder">Game Search</Link>
         </nav>
         <Routes>
-          <Route path="/" element={<Home games={games} />} />
+          <Route path="/" element={<Home />} />
           <Route path="/news" element={<News />} />
           <Route path="/add-game" element={<GameAddForm addGame={addGame} />} />
           <Route path="/game-finder" element={<GameFinder games={games} />} />
