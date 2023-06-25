@@ -1,6 +1,7 @@
+// GameForm.js
 import React, { useState } from "react";
 
-const GameForm = () => {
+const GameForm = ({ addGame }) => {
   const [title, setTitle] = useState("");
   const [genre, setGenre] = useState("");
 
@@ -24,6 +25,7 @@ const GameForm = () => {
         console.log("GameForm POST Success", data);
         setTitle("");
         setGenre("");
+        addGame(data); // Update the state in the parent component
       })
       .catch((error) => {
         console.error("handleSubmit Error:", error);
