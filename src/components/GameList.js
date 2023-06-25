@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import GameItem from "./GameItem";
+import Pagination from "./Pagination";
 
 const GameList = () => {
   const [games, setGames] = useState([]);
@@ -35,15 +36,14 @@ const GameList = () => {
     setSearchTerm(event.target.value);
   };
 
-  // Filter the games based on the search term
   const filteredGames = games.filter((game) =>
     game.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Calculate the index range of games to be rendered for the current page
   const indexOfLastGame = currentPage * gamesPerPage;
   const indexOfFirstGame = indexOfLastGame - gamesPerPage;
   const currentGames = filteredGames.slice(indexOfFirstGame, indexOfLastGame);
+  const totalPages = Math.ceil(filteredGames.length / gamesPerPage);
 
   return (
     <div>
@@ -57,24 +57,14 @@ const GameList = () => {
         />
       </div>
       {currentGames.map((game) => (
-        <div key={game.id}>
-          <img src={game.thumbnail} alt="game thumbnail" />
-          <h3>{game.title}</h3>
-          <p>{game.genre}</p>
-        </div>
+        <GameItem key={game.id} game={game} />
       ))}
-      <div>
-        {currentPage > 1 && (
-          <Link to="#" onClick={handlePrevPage}>
-            Previous Page
-          </Link>
-        )}
-        {currentPage < Math.ceil(filteredGames.length / gamesPerPage) && (
-          <Link to="#" onClick={handleNextPage}>
-            Next Page
-          </Link>
-        )}
-      </div>
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        handlePrevPage={handlePrevPage}
+        handleNextPage={handleNextPage}
+      />
     </div>
   );
 };
