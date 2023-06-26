@@ -1,4 +1,3 @@
-// App.js
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import GameFinder from "./components/GameFinder";
@@ -20,7 +19,7 @@ function App() {
           <Link to="/">Home</Link>
           <Link to="/news">News</Link>
           <Link to="/add-game">Add Game</Link>
-          <Link to="/game-finder">Game Search</Link>
+          <Link to="/game-finder">Search</Link>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />

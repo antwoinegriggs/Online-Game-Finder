@@ -4,9 +4,8 @@ import FetchLatestGames from "./FetchLatestGames";
 const Home = () => {
   return (
     <div class="home-container">
-      <FetchLatestNews />
-      )(
       <FetchLatestGames />
+      <FetchLatestNews />
     </div>
   );
 };

@@ -12,7 +12,7 @@ const FetchLatestNews = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log("LatestNews GET Success", data);
-        setNews(data.slice(0, 5));
+        setNews(data.slice(0, 8));
       })
       .catch((error) => {
         console.error("LatestNews GET Error:", error);
@@ -20,17 +20,26 @@ const FetchLatestNews = () => {
   };
 
   return (
-    <div class="game-news-container">
+    <div class="game-news">
       <h2>Game News</h2>
-      {latestNews.map((news) => (
-        <div class="game-news-card" key={news.id}>
-          <a href={news.article_url} target="_blank" rel="noopener noreferrer">
-            <img src={news.main_image} alt="game thumbnail" />
-          </a>
-          <h3>{news.title}</h3>
-          <p>{news.short_description}</p>
-        </div>
-      ))}
+      <div class="game-news-container">
+        {latestNews.map((news) => (
+          <div class="game-news-card" key={news.id}>
+            <a
+              href={news.article_url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={news.thumbnail} alt="game thumbnail" />
+            </a>
+            <div class="game-news-info">
+              <h3>{news.title}</h3>
+              <br />
+              <p>{news.short_description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

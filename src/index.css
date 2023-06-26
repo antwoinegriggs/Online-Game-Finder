@@ -1,13 +1,204 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  height: 100%;
+  max-width: auto;
+  width: 218px;
+  border-radius: 0.2rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Nav Bar */
+nav.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: auto;
+  padding: 2rem;
+  color: rgb(245, 245, 245);
+  background-color: rgb(43, 42, 42);
+}
+
+/* Home Game News */
+
+.game-list {
+  background-color: rgb(245, 245, 245);
+  padding: 2rem;
+}
+.game-list-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.game-list-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0.5rem;
+
+  border-radius: 0.2rem;
+  box-shadow: 1px 2px 3px 4px rgba(20, 20, 20, 0.4);
+  background-color: aliceblue;
+}
+@media (max-width: 1000px) {
+  .game-list-card {
+    padding-bottom: 2rem;
+  }
+}
+
+/*Home Game News */
+.game-news {
+  border-radius: 0.2rem;
+  box-shadow: 1px 2px 3px 4px rgba(20, 20, 20, 0.4);
+  padding: 2.5rem;
+}
+
+.game-news-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0.3rem;
+  padding: 1rem;
+}
+
+.game-news-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  /* padding: 0.25rem 0.5rem; */
+  border-radius: 0.2rem;
+  margin: 0.25rem;
+}
+
+.game-news-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 5%;
+}
+
+.game-news-card:nth-child(even) {
+  background-color: rgb(245, 245, 245);
+}
+
+.game-news-card:nth-child(odd) {
+  box-shadow: 1px 2px 3px 4px rgba(20, 20, 20, 0.4);
+}
+
+@media (max-width: 800px) {
+  .game-news-card {
+    flex-direction: column;
+    padding: auto;
+    padding-bottom: 2.5rem;
+  }
+  .game-news-info {
+    align-items: center;
+  }
+  .game-news-card img {
+    width: 100%;
+  }
+}
+
+/* Game News*/
+.news {
+  border-radius: 0.2rem;
+  box-shadow: 1px 2px 3px 4px rgba(20, 20, 20, 0.4);
+  padding: 2.5rem;
+}
+
+.news-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0.3rem;
+  padding: 1rem;
+}
+
+.news-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  /* padding: 0.25rem 0.5rem; */
+  border-radius: 0.2rem;
+  margin: 0.25rem;
+}
+
+.news-card:nth-child(even) {
+  background-color: rgb(245, 245, 245);
+}
+
+.news-card:nth-child(odd) {
+  box-shadow: 1px 2px 3px 4px rgba(20, 20, 20, 0.4);
+}
+
+.news-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 5%;
+}
+@media (max-width: 800px) {
+  .news-card {
+    flex-direction: column;
+    padding: auto;
+    padding-bottom: 2.5rem;
+  }
+  .news-info {
+    align-items: center;
+  }
+  .news-card img {
+    width: 100%;
+  }
+}
+/* Game Fineder */
+.game-finder-container {
+  padding: 2rem;
+}
+.game-item-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: auto;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.game-item-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-width: 218px;
+  margin: 0.5rem;
+  border-radius: 0.2rem;
+  box-shadow: 1px 2px 3px 4px rgba(20, 20, 20, 0.4);
+  background-color: aliceblue;
+  padding-bottom: 1rem;
+}
+
+.search-bar {
+  padding: 0 1.5rem;
+  margin: 0.5rem;
+}
+
+.search-input {
+  width: 100%;
+  height: 2rem;
+  border: 0.15rem black solid;
+  border-radius: 0.2rem;
+  font-weight: bolder;
 }

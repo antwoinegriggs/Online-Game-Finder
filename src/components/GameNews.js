@@ -36,21 +36,27 @@ const News = () => {
   const totalPages = Math.ceil(news.length / newsPerPage);
 
   return (
-    <div class="news-container">
+    <div class="news">
       <h2>Game News</h2>
-      {currentNews.map((currentNews) => (
-        <div key={currentNews.id}>
-          <a
-            href={currentNews.article_url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={currentNews.main_image} alt="game thumbnail" />
-          </a>
-          <h3>{currentNews.title}</h3>
-          <p>{currentNews.short_description}</p>
-        </div>
-      ))}
+      <div class="news-container">
+        {currentNews.map((currentNews) => (
+          <div class="news-card" key={currentNews.id}>
+            <a
+              href={currentNews.thumbnail}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={currentNews.thumbnail} alt="game thumbnail" />
+            </a>
+            <div class="news-info">
+              <h3>{currentNews.title}</h3>
+              <br />
+              <p>{currentNews.short_description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="news-pagination"></div>
       <Pagination
         currentPage={currentPage}
         totalPages={totalPages}

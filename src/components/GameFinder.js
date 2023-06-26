@@ -50,8 +50,9 @@ const GameFinder = () => {
       <h2>Game Finder</h2>
       <div class="search-bar">
         <input
+          class="search-input"
           type="text"
-          placeholder="Search by title"
+          placeholder="Search by Title"
           value={searchTerm}
           onChange={handleSearch}
         />
