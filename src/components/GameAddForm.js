@@ -3,11 +3,29 @@ import React, { useState } from "react";
 const GameAddForm = ({ addGame }) => {
   const [title, setTitle] = useState("");
   const [genre, setGenre] = useState("");
+  const [thumbnail, setThumbnail] = useState(
+    "https://cdn.discordapp.com/attachments/952764969638834228/1004715701744975892/Criz.png"
+  );
+
+  const fetchThumbnail = () => {
+    fetch("https://anyanime-api.kurizu.repl.co/anime")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("RandomImg GET Success", data);
+        setThumbnail(data.stuff[0].image);
+      })
+      .catch((error) => {
+        console.error("RandomImg GET Error:", error);
+      });
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    fetchThumbnail();
+    console.log(thumbnail);
 
     const newGame = {
+      thumbnail,
       title,
       genre,
     };

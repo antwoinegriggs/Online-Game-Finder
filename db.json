@@ -4978,26 +4978,6 @@
       "developer": "Cybertopia",
       "release_date": "0000-00-00",
       "profile_url": "https://www.mmobomb.com/astro-empires"
-    },
-    {
-      "title": "Test",
-      "genre": "",
-      "id": 1154
-    },
-    {
-      "title": "Test ONe",
-      "genre": "Two",
-      "id": 1155
-    },
-    {
-      "title": "Test Game 1",
-      "genre": "MMORPG",
-      "id": 1156
-    },
-    {
-      "title": "Combat Arms",
-      "genre": "Shooter",
-      "id": 1157
     }
   ]
 }
