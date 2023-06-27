@@ -12,7 +12,7 @@ const FetchLatestGames = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log("LatestGames GET Success", data);
-        setGames(data.slice(0, 4));
+        setGames(data.slice(0, 7));
       })
       .catch((error) => {
         console.error("LatestGames GET Error:", error);
