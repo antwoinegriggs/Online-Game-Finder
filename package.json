@@ -1,7 +1,7 @@
 {
+  "homepage": "https://antwoinegriggs.github.io/Online-Game-Finder/",
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://antwoinegriggs.github.io/Online-Game-Finder/",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",
