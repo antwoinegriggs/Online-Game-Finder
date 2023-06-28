@@ -8,17 +8,21 @@ const Pagination = ({
   handleNextPage,
 }) => {
   return (
-    <div>
-      {currentPage > 1 && (
-        <Link to="#" onClick={handlePrevPage}>
-          Previous Page
-        </Link>
-      )}
-      {currentPage < totalPages && (
-        <Link to="#" onClick={handleNextPage}>
-          Next Page
-        </Link>
-      )}
+    <div className="page-card">
+      <div className="previous">
+        {currentPage > 1 && (
+          <Link to="#" onClick={handlePrevPage}>
+            Previous Page
+          </Link>
+        )}
+      </div>
+      <div className="next">
+        {currentPage < totalPages && (
+          <Link to="#" onClick={handleNextPage}>
+            Next Page
+          </Link>
+        )}
+      </div>
     </div>
   );
 };

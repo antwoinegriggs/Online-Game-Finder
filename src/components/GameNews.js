@@ -36,33 +36,35 @@ const News = () => {
   const totalPages = Math.ceil(news.length / newsPerPage);
 
   return (
-    <div class="news">
-      <h2>Game News</h2>
-      <div class="news-container">
-        {currentNews.map((currentNews) => (
-          <div class="news-card" key={currentNews.id}>
-            <a
-              href={currentNews.thumbnail}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={currentNews.thumbnail} alt="game thumbnail" />
-            </a>
-            <div class="news-info">
-              <h3>{currentNews.title}</h3>
-              <br />
-              <p>{currentNews.short_description}</p>
+    <div className="news-background">
+      <div className="news-foreground">
+        <h2>Game News</h2>
+        <div className="news-container">
+          {currentNews.map((currentNews) => (
+            <div className="news-card" key={currentNews.id}>
+              <a
+                href={currentNews.thumbnail}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={currentNews.thumbnail} alt="game thumbnail" />
+              </a>
+              <div className="news-info">
+                <h3>{currentNews.title}</h3>
+                <br />
+                <p>{currentNews.short_description}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <div className="pagination-container"></div>
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          handlePrevPage={handlePrevPage}
+          handleNextPage={handleNextPage}
+        />
       </div>
-      <div class="news-pagination"></div>
-      <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        handlePrevPage={handlePrevPage}
-        handleNextPage={handleNextPage}
-      />
     </div>
   );
 };

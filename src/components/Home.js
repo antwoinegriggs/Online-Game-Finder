@@ -3,7 +3,7 @@ import FetchLatestGames from "./FetchLatestGames";
 
 const Home = () => {
   return (
-    <div class="home-container">
+    <div className="home-container">
       <FetchLatestGames />
       <FetchLatestNews />
     </div>

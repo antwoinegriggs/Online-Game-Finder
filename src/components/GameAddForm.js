@@ -30,7 +30,7 @@ const GameAddForm = ({ addGame }) => {
       genre,
     };
 
-    fetch("http://localhost:3001/games", {
+    fetch("https://online-games-db.onrender.com/games", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -50,20 +50,26 @@ const GameAddForm = ({ addGame }) => {
   };
 
   return (
-    <div>
+    <div className="add-game-container">
       <h2>Add Game</h2>
+      <br />
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>Title:</label>
+        <div className="form-container">
           <input
+            className="options-input"
             type="text"
+            placeholder="Add Game Title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
         </div>
-        <div>
-          <label>Genre:</label>
-          <select value={genre} onChange={(e) => setGenre(e.target.value)}>
+        <div className="options-container">
+          <br />
+          <select
+            className="options-drop-down"
+            value={genre}
+            onChange={(e) => setGenre(e.target.value)}
+          >
             <option value="">Select Genre</option>
             <option value="MMORPG">MMORPG</option>
             <option value="Social">Social</option>
@@ -81,7 +87,10 @@ const GameAddForm = ({ addGame }) => {
             <option value="MMOARPG">MMOARPG</option>
           </select>
         </div>
-        <button type="submit">Add</button>
+        <br />
+        <button className="add-btn" type="submit">
+          Add Game
+        </button>
       </form>
     </div>
   );

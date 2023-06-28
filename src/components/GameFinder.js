@@ -6,17 +6,17 @@ const GameFinder = () => {
   const [games, setGames] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
-  const gamesPerPage = 25;
+  const gamesPerPage = 28;
 
   useEffect(() => {
     fetchGames();
   }, []);
 
   const fetchGames = () => {
-    fetch("http://localhost:3001/games")
+    fetch("https://online-games-db.onrender.com/games")
       .then((response) => response.json())
       .then((data) => {
-        console.log("GameFinder GET Success");
+        console.log("GameFinder GET Success", data);
         setGames(data);
       })
       .catch((error) => {
@@ -46,23 +46,23 @@ const GameFinder = () => {
   const totalPages = Math.ceil(filteredGames.length / gamesPerPage);
 
   return (
-    <div class="game-finder-container">
+    <div className="game-finder-container">
       <h2>Game Finder</h2>
-      <div class="search-bar">
+      <div className="search-bar">
         <input
-          class="search-input"
+          className="search-input"
           type="text"
           placeholder="Search by Title"
           value={searchTerm}
           onChange={handleSearch}
         />
       </div>
-      <div class="game-item-container">
+      <div className="game-item-container">
         {currentGames.map((game) => (
           <GameItem key={game.id} game={game} />
         ))}
       </div>
-      <div class="pagination-container">
+      <div className="pagination-container">
         <Pagination
           currentPage={currentPage}
           totalPages={totalPages}
