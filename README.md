@@ -1,31 +1,32 @@
-Description:
+<h2>Description:</h2>
+
 This is a responsive single page application project built with React. It aims to provide hands-on practice for various web development concepts, including REST API integration, CRUD operations, React components, UI design, client-side routing, and hook usage. The project focuses on showcasing the latest games and game news, while also offering features such as adding games to the database and searching for specific titles.
 
-Installation:
+<h2>Installation:</h2>
 
-Clone the repository to your local machine.
-Install the required dependencies using your preferred package manager (e.g., npm or yarn). Run the following command in the project directory:
-Copy code
-npm install
+1. Clone the repository to your local machine.
+2. Install the required dependencies using your preferred package manager (e.g., npm or yarn). Run the following command in the project directory:
+   
+npm install<br>
+
 or
-Copy code
-yarn install
 
-Usage:
+yarn install<br>
 
-Review the codebase to understand the implementation details and the integration of APIs.
-Configure the project to handle API authentication, if required.
-Start the development server using the appropriate command:
+<h2>Usage:</h2>
 
-sql
-Copy code
-npm start
+1. Review the codebase to understand the implementation details and the integration of APIs.
+2. Configure the project to handle API authentication, if required.
+3. Start the development server using the appropriate command:
+
+
+npm start<br>
+
 or
-sql
-Copy code
-yarn start
 
-Access in your browser by navigating to the specified URL or visit the deployed version at https://antwoinegriggs.github.io/Online-Game-Finder/.
+yarn start<br>
+
+<p>Access in your browser by navigating to the specified URL or visit the deployed version at https://antwoinegriggs.github.io/Online-Game-Finder/.</p>
 
 Once running, you can explore its different pages:
 
@@ -35,6 +36,6 @@ Add Game Page: Features a form where users can contribute to the database by add
 Search Page: Enables users to search for specific games using keywords, with results organized and paginated for easy navigation.
 Throughout the project, you'll gain practical experience in building responsive single page applications, integrating APIs, implementing CRUD operations, and leveraging React components and hooks. This project serves as a valuable resource for developers looking to enhance their skills and create dynamic web applications.
 
-Credits:
+<h2>Credits:</h2>
 
 MMObomb API (https://www.mmobomb.com/api1) for the game news feed and the anyanime API (https://www.npmjs.com/package/anyanime) for supplying random pictures on the Add Game page.
