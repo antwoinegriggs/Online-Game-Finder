@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Online-Game-Finder/static/css/main.bd83d72b.css",
-    "main.js": "/Online-Game-Finder/static/js/main.9c0de77d.js",
+    "main.js": "/Online-Game-Finder/static/js/main.38f1086f.js",
     "index.html": "/Online-Game-Finder/index.html",
     "main.bd83d72b.css.map": "/Online-Game-Finder/static/css/main.bd83d72b.css.map",
-    "main.9c0de77d.js.map": "/Online-Game-Finder/static/js/main.9c0de77d.js.map"
+    "main.38f1086f.js.map": "/Online-Game-Finder/static/js/main.38f1086f.js.map"
   },
   "entrypoints": [
     "static/css/main.bd83d72b.css",
-    "static/js/main.9c0de77d.js"
+    "static/js/main.38f1086f.js"
   ]
 }
