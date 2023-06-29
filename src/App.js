@@ -22,10 +22,13 @@ function App() {
           <Link to="/game-finder">Search</Link>
         </nav>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/add-game" element={<GameAddForm addGame={addGame} />} />
-          <Route path="/game-finder" element={<GameFinder games={games} />} />
+          <Route path="/" component={<Home />} />
+          <Route path="/news" component={<News />} />
+          <Route
+            path="/add-game"
+            component={<GameAddForm addGame={addGame} />}
+          />
+          <Route path="/game-finder" component={<GameFinder games={games} />} />
         </Routes>
       </Router>
     </div>
