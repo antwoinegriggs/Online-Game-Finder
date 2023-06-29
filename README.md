@@ -6,7 +6,11 @@ This is a responsive single page application project built with React. It aims t
 
 1. Clone the repository to your local machine.
 2. Install the required dependencies using your preferred package manager (e.g., npm or yarn). Run the following command in the project directory:
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> f66a2c9d3c7b5848987ab128772b8deca5df2527
 npm install<br>
 
 or
@@ -19,6 +23,10 @@ yarn install<br>
 2. Configure the project to handle API authentication, if required.
 3. Start the development server using the appropriate command:
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f66a2c9d3c7b5848987ab128772b8deca5df2527
 npm start<br>
 
 or
