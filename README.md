@@ -42,3 +42,5 @@ Throughout the project, you'll gain practical experience in building responsive 
 <h2>Credits:</h2>
 
 MMObomb API (https://www.mmobomb.com/api1) for the game news feed and the anyanime API (https://www.npmjs.com/package/anyanime) for supplying random pictures on the Add Game page.
+
+Note: During testing, it is recommended to use Allow CORS browser extensions for enabling Cross-Origin Resource Sharing (CORS) to avoid any potential CORS-related issues. These extensions can be helpful during development testing.
