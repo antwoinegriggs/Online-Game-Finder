@@ -31,9 +31,13 @@ yarn start<br>
 Once running, you can explore its different pages:
 
 Home Page: Displays a selection of games and news articles, providing an overview of the latest updates.
+
 News Page: Allows users to browse through a paginated view of all news articles for an in-depth look at the latest game-related news.
+
 Add Game Page: Features a form where users can contribute to the database by adding new games.
+
 Search Page: Enables users to search for specific games using keywords, with results organized and paginated for easy navigation.
+
 Throughout the project, you'll gain practical experience in building responsive single page applications, integrating APIs, implementing CRUD operations, and leveraging React components and hooks. This project serves as a valuable resource for developers looking to enhance their skills and create dynamic web applications.
 
 <h2>Credits:</h2>
