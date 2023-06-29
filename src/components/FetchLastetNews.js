@@ -31,7 +31,16 @@ const FetchLatestNews = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={news.thumbnail} alt="game thumbnail" />
+                <img
+                  src={news.thumbnail}
+                  className="thumbnail-image"
+                  alt="news thumbnail"
+                />
+                <img
+                  src={news.main_image}
+                  className="main-image"
+                  alt="news image"
+                />
               </a>
               <div className="home-news-info">
                 <h3>{news.title}</h3>

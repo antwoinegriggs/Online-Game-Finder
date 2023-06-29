@@ -332,3 +332,21 @@ nav.nav-bar {
   font-weight: bolder;
   font-size: larger;
 }
+
+@media (max-width: 1300px) {
+  .thumbnail-image {
+    display: none;
+  }
+  .main-image {
+    display: block;
+  }
+}
+
+@media (min-width: 1301px) {
+  .thumbnail-image {
+    display: block;
+  }
+  .main-image {
+    display: none;
+  }
+}

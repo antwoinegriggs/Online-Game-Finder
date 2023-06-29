@@ -43,11 +43,20 @@ const News = () => {
           {currentNews.map((currentNews) => (
             <div className="news-card" key={currentNews.id}>
               <a
-                href={currentNews.thumbnail}
+                href={currentNews.article_url}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={currentNews.thumbnail} alt="game thumbnail" />
+                <img
+                  src={currentNews.thumbnail}
+                  alt="game thumbnail"
+                  className="thumbnail-image"
+                />
+                <img
+                  src={currentNews.main_image}
+                  alt="game image"
+                  className="main-image"
+                />
               </a>
               <div className="news-info">
                 <h3>{currentNews.title}</h3>
