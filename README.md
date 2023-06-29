@@ -26,7 +26,7 @@ or
 
 yarn start<br>
 
-<p>Access in your browser by navigating to the specified URL or visit the deployed version at https://antwoinegriggs.github.io/.</p>
+<p>Access in your browser by navigating to the specified URL or visit the deployed version at https://antwoinegriggs.github.io/Online-Game-Finder/.</p>
 
 Once running, you can explore its different pages:
 
